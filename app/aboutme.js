@@ -11,9 +11,19 @@ export default function Page() {
         <View>
           <Image source={foto} style={styles.foto} />
         </View>
-        <Text style={styles.subtitle}>Ana Clara Amianti</Text>
+        <Text style={styles.subtitle}>
+          <Text style={{fontWeight: "bold"}}>Nome:</Text> Ana Clara Amianti
+        </Text>
+       <Text style={styles.subtitle}>
+        <Text style={{fontWeight: "bold"}}>RM</Text> 08445
+       </Text>
+       <Text style={styles.subtitle}>
+        <Text style={{fontWeight: "bold"}}>Endereço</Text> Rua José Bonifacio, 416 - Piquerobi, São Paulo
+       </Text>
       </View>
+      <StatusBar style="auto" />
     </View>
+
   );
 }
 
@@ -23,16 +33,23 @@ const styles = StyleSheet.create({
     alignItems: "center",
     backgroundColor: "rgb(255, 239, 232)",
     justifyContent: "center",
+    alignItems: "center",
+    padding: 50,
   },
   main: {
     flexDirection: Platform.OS === "web" ? "row" : "column",
+    gap: 20,
+    alignItems: "center",
   },
   title: {
-    marginBottom: 20,
-    fontSize: 32,
+    marginBottom: -15,
+    //fontSize: 32,
+     fontSize: Platform.OS === "web" ? 48 : 36,
+    color: "#888",
+      fontFamily: "cursive",
   },
   subtitle: {
-    fontSize: 36,
+    fontSize: 20,
     color: "#888",
   },
   foto: {
@@ -40,6 +57,6 @@ const styles = StyleSheet.create({
     height: 200,
     borderRadius: 100,
     alignItems: "center",
-    marginBottom: 20,
+    //marginBottom: 20,
   }
 });

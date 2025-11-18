@@ -3,7 +3,7 @@ import { StatusBar } from "expo-status-bar";
 
 export default function Page() {
   return (
-    <View style={styles.container}>
+ <View style={styles.container}>
       <View style={styles.main}>
         <Text style={styles.title}>Torre de Pisa</Text>
         <Text style={styles.subtitle}>"A Torre de Pisa é um campanário localizado na cidade de Pisa,
@@ -13,6 +13,7 @@ export default function Page() {
         </Text>
       </View>
     </View>
+  
   );
 }
 
