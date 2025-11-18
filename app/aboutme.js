@@ -1,16 +1,16 @@
 import { StatusBar } from "react-native-web";
-import { StyleSheet, Text, View } from "react-native";
-import foto from "../assets/anafoto.jpg";
+import { StyleSheet, Text, View, Image} from "react-native";
+import foto from "../assets/foto.jpg";
 
 export default function Page() {
   return (
     <View style={styles.container}>
       <View style={styles.main}>
         <Text style={styles.title}>Sobre mim</Text>
-        <view>
-          <image soutce={foto}/>
-        </view>
-        <Text style={styles.subtitle}>Detalhes</Text>
+        <View>
+         <Image source={foto} style={styles.foto} />
+        </View>
+        <Text style={styles.subtitle}>Ana Clara Amianti</Text>
       </View>
     </View>
   );
@@ -20,7 +20,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     alignItems: "center",
-    backgroundColor: "rgb(238, 209, 253)",
+    backgroundColor: "rgb(255, 239, 232)",
     justifyContent: "center",
   },
   main: {
@@ -30,11 +30,18 @@ const styles = StyleSheet.create({
     marginHorizontal: "auto",
   },
   title: {
-    fontSize: 64,
-    fontWeight: "bold",
+  marginBottom: 20,
+  fontSize:32,
   },
   subtitle: {
     fontSize: 36,
     color: "#888",
   },
+  foto: {
+    width: 200,
+    height: 200,
+    borderRadius: 100,
+    alignItems: "center",
+    marginBottom: 20,
+  }
 });
