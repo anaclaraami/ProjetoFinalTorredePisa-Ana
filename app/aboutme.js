@@ -1,5 +1,5 @@
 import { StatusBar } from "react-native-web";
-import { StyleSheet, Text, View, Image} from "react-native";
+import { StyleSheet, Text, View, Image, Platform } from "react-native";
 import foto from "../assets/foto.jpg";
 
 export default function Page() {
@@ -7,8 +7,9 @@ export default function Page() {
     <View style={styles.container}>
       <View style={styles.main}>
         <Text style={styles.title}>Sobre mim</Text>
+        <View style={styles.main} />
         <View>
-         <Image source={foto} style={styles.foto} />
+          <Image source={foto} style={styles.foto} />
         </View>
         <Text style={styles.subtitle}>Ana Clara Amianti</Text>
       </View>
@@ -24,14 +25,11 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
   main: {
-    flex: 1,
-    justifyContent: "center",
-    maxWidth: 960,
-    marginHorizontal: "auto",
+    flexDirection: Platform.OS === "web" ? "row" : "column",
   },
   title: {
-  marginBottom: 20,
-  fontSize:32,
+    marginBottom: 20,
+    fontSize: 32,
   },
   subtitle: {
     fontSize: 36,
