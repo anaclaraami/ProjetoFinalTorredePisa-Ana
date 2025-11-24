@@ -3,7 +3,7 @@ import { Tabs } from 'expo-router';
 
 export default function TabLayout() {
   return (
-    <Tabs screenOptions={{ tabBarActiveTintColor: 'blue' }}>
+    <Tabs screenOptions={{ tabBarActiveTintColor: 'black' }}>
       <Tabs.Screen
         name="index"
         options={{
@@ -21,5 +21,6 @@ export default function TabLayout() {
         }}
       />
     </Tabs>
+    
   );
-}
+} 
