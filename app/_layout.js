@@ -12,7 +12,14 @@ export default function TabLayout() {
           headerShown: false,
         }}
       />
-     
+      <Tabs.Screen
+        name="aboutme"
+        options={{
+          title: 'Sobre',
+          tabBarIcon: ({ color }) => <FontAwesome size={28} name="cog" color={color} />,
+           headerShown: false,
+        }}
+      />
     </Tabs>
     
   );
