@@ -1,4 +1,6 @@
 import FontAwesome from '@expo/vector-icons/FontAwesome';
+import Ionicons from '@expo/vector-icons/Ionicons';
+import MaterialIcons from '@expo/vector-icons/MaterialIcons';
 import { Tabs } from 'expo-router';
 
 export default function TabLayout() {
@@ -13,14 +15,23 @@ export default function TabLayout() {
         }}
       />
       <Tabs.Screen
+        name="construcao"
+        options={{
+          title: 'Construção',
+          tabBarIcon: ({ color }) => <MaterialIcons size={28} name="construction" color={color} />,
+          headerShown: false,
+        }}/>
+      <Tabs.Screen
         name="aboutme"
         options={{
           title: 'Sobre',
-          tabBarIcon: ({ color }) => <FontAwesome size={28} name="cog" color={color} />,
+          tabBarIcon: ({ color }) => <Ionicons name="people" size={24} color="black" />,
            headerShown: false,
-        }}
-      />
+        }}/>
+        
+      
+      
     </Tabs>
-    
+  
   );
 } 
