@@ -1,6 +1,6 @@
 import { StyleSheet, Text, View, Image, ScrollView } from "react-native";
 import { StatusBar } from "expo-status-bar";
-import torre2 from "../assets/torre2.jpg";
+import mapa from "../assets/mapatorre.jpg";
 
 export default function Page() {
   return (
@@ -10,17 +10,14 @@ export default function Page() {
       <StatusBar style="auto" />
 
       <View style={styles.card}>
-        <Text style={styles.title}>Inclinação</Text>
-<View style={styles.divisor}></View>
+        <Text style={styles.title}>Localização</Text>
 
-       <Image source={torre2} style={styles.foto2} />
+  <View style={styles.divisor}></View>
+
+       <Image source={mapa} style={styles.fotom} />
 
         <Text style={styles.subtitle}>
-          A Torre de Pisa é famosa por sua inclinação, que começou ainda durante sua construção no século XII. Isso aconteceu porque ela foi erguida sobre um solo instável, formado por argila, areia e água subterrânea, que não era firme o suficiente para sustentar o peso da estrutura.
-           {"\n\n"}
-           Como resultado, a torre afundou mais de um lado e passou a inclinar. Hoje, ela tem uma inclinação de cerca de 4 graus, o que faz com que o topo fique aproximadamente 4 metros deslocado do eixo vertical original. No passado, antes das obras de estabilização finalizadas em 2001, essa inclinação chegava a quase 5,5 graus, colocando a torre em risco de desmoronamento. Depois de muitos estudos e intervenções, a estrutura foi estabilizada, a inclinação foi reduzida um pouco e agora a torre é considerada segura por pelo menos 200 anos.
-            {"\n\n"}
-            Apesar de muita gente pensar que a inclinação faz parte do projeto, ela não foi proposital — na verdade, foi um erro de engenharia que acabou se tornando o principal charme e símbolo do monumento.
+          A Torre de Pisa fica na cidade de Pisa, na região da Toscana, na Itália. Ela está situada na Piazza dei Miracoli, um grande espaço aberto considerado um dos centros históricos mais importantes do país. Nesse local, além da torre, também estão a Catedral de Pisa e o Batistério, formando um conjunto arquitetônico muito visitado por turistas do mundo todo.
         </Text>
       </View>
       </ScrollView>
@@ -60,7 +57,7 @@ const styles = StyleSheet.create({
      fontFamily: "serif",
   },
 
- foto2: {
+ fotom: {
     width: "100%",
     height: 240,
     borderRadius: 15,

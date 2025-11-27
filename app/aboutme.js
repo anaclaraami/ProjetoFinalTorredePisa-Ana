@@ -15,15 +15,15 @@ export default function Page() {
 
           <View style={{ marginTop: 15 }}>
             <Text style={styles.info}>
-              <Text style={styles.bold}>👤 Nome: </Text> Ana Clara Amianti
+              <Text style={styles.bold}> Nome: </Text> Ana Clara Amianti
             </Text>
 
             <Text style={styles.info}>
-              <Text style={styles.bold}>📘 RM: </Text> 08445
+              <Text style={styles.bold}> RM: </Text> 08445
             </Text>
 
             <Text style={styles.info}>
-              <Text style={styles.bold}>📍 Endereço: </Text> 
+              <Text style={styles.bold}> Endereço: </Text> 
               Rua José Bonifacio, 416 - Piquerobi, São Paulo
             </Text>
           </View>

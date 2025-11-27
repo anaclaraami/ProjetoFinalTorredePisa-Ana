@@ -39,7 +39,7 @@ const styles = StyleSheet.create({
     padding: 20,
 
     // gradiente fake com duas cores
-    backgroundColor: "rgb(235, 208, 205)",
+    backgroundColor: "rgb(243, 216, 216)",
   },
 
   card: {
