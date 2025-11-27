@@ -40,8 +40,15 @@ export default function TabLayout() {
          <Tabs.Screen
         name="dentro"
         options={{
-          title: 'Dentro',
+          title: 'Interior',
           tabBarIcon: ({ color }) => <MaterialIcons size={28} name="church" color={color} />,
+          headerShown: false,
+        }}/>
+         <Tabs.Screen
+        name="curiosidade"
+        options={{
+          title: 'Curiosidades',
+          tabBarIcon: ({ color }) => <MaterialIcons size={28} name="question-answer" color={color} />,
           headerShown: false,
         }}/>
         

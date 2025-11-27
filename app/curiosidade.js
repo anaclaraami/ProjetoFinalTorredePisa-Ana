@@ -1,7 +1,6 @@
 import { StyleSheet, Text, View, Image, ScrollView } from "react-native";
 import { StatusBar } from "expo-status-bar";
-import escada from "../assets/escada.jpg";
-import sinos from "../assets/sinos.jpg";
+import fotom from "../assets/mulhertorre.jpg";
 
 export default function Page() {
   return (
@@ -11,20 +10,20 @@ export default function Page() {
       <StatusBar style="auto" />
 
       <View style={styles.card}>
-        <Text style={styles.title}>Parte interna da Torre</Text>
- 
-    <View style={styles.divisor}></View>
+        <Text style={styles.title}>Curiosidades</Text>
+
+  <View style={styles.divisor}></View>
+
+       <Image source={fotom} style={styles.fotom} />
 
         <Text style={styles.subtitle}>
-      "A Torre de Pisa é, de fato, um campanário, ou seja, é uma torre construída para abrigar os sinos da Catedral de Pisa, situada ao lado do monumento. O interior dela é formado por um amplo vão que vai da base até o topo, por cinco lances de degraus que formam escadas em espiral, por dutos de ventilação e pelos sete sinos, que tocam quando da realização de missas na catedral. A foto a seguir mostra um trecho da escada que dá acesso aos sinos:"
-
+          A construção foi demorada: A construção levou cerca de 177 anos para ser concluída, pois foi realizada em três fases e interrompida por guerras. 
+           {"\n\n"}
+A inclinação começou cedo: A torre começou a se inclinar após a construção do terceiro andar, em 1178. 
+Não é a mais inclinada: Apesar de sua fama, a Torre de Pisa não é a mais inclinada do mundo; a Torre de Suurhusen, na Alemanha, possui uma inclinação maior. 
+ {"\n\n"}
+Experimentos de Galileu: O cientista Galileu Galilei usou a torre para realizar experimentos sobre a queda de corpos, demonstrando que a velocidade de queda é independente da massa dos objetos, lançando duas bolas de canhão de pesos diferentes do topo. .
         </Text>
-         <Image source={escada} style={styles.foto2} />
-          <Text style={styles.subtitle}>
-            Quando se chega ao topo da Torre de Pisa, essa é a visão das escadas:
-          </Text>
-            <Image source={sinos} style={styles.foto2} />
-
       </View>
       </ScrollView>
     </View>
@@ -63,9 +62,9 @@ const styles = StyleSheet.create({
      fontFamily: "serif",
   },
 
- foto2: {
-    width: "50%",
-    height: 150,
+ fotom: {
+    width: "100%",
+    height: 240,
     borderRadius: 15,
     marginBottom: 20,
  },
@@ -73,9 +72,9 @@ const styles = StyleSheet.create({
     width: 60,
     height: 4,
     backgroundColor: "#d6b28a",
-    borderRadius: 50,
+    borderRadius: 10,
     marginTop: 8,
-    marginBottom: 10,
+    marginBottom: 20,
   },
 
   subtitle: {
