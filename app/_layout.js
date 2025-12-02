@@ -7,12 +7,12 @@ import { Tabs } from 'expo-router';
 
 export default function TabLayout() {
   return (
-    <Tabs screenOptions={{ tabBarActiveTintColor: 'black' }}>
+    <Tabs screenOptions={{ tabBarActiveTintColor: 'pink' }}>
       <Tabs.Screen
         name="index"
         options={{
           title: 'Início',
-          tabBarIcon: ({ color }) => <FontAwesome size={28} name="home" color={color} />,
+          tabBarIcon: ({ color }) => <FontAwesome size={28} name="home" color="pink"/>,
           headerShown: false,
         }}
       />
@@ -20,35 +20,35 @@ export default function TabLayout() {
         name="construcao"
         options={{
           title: 'Construção',
-          tabBarIcon: ({ color }) => <MaterialIcons size={28} name="construction" color={color} />,
+          tabBarIcon: ({ color }) => <MaterialIcons size={28} name="construction" color="pink" />,
           headerShown: false,
         }}/>
          <Tabs.Screen
         name="iclinacao"
         options={{
           title: '  Inclinação',
-          tabBarIcon: ({ color }) => <MaterialCommunityIcons size={28} name="slope-downhill" color={color} />,
+          tabBarIcon: ({ color }) => <MaterialCommunityIcons size={28} name="slope-downhill" color="pink" />,
           headerShown: false,
         }}/>
          <Tabs.Screen
         name="localizacao"
         options={{
           title: ' Localização',
-          tabBarIcon: ({ color }) => <Entypo size={28} name="location-pin" color={color} />,
+          tabBarIcon: ({ color }) => <Entypo size={28} name="location-pin" color="pink" />,
           headerShown: false,
         }}/>
          <Tabs.Screen
         name="dentro"
         options={{
           title: 'Interior',
-          tabBarIcon: ({ color }) => <MaterialIcons size={28} name="church" color={color} />,
+          tabBarIcon: ({ color }) => <MaterialIcons size={28} name="church" color="pink" />,
           headerShown: false,
         }}/>
          <Tabs.Screen
         name="curiosidade"
         options={{
           title: 'Curiosidades',
-          tabBarIcon: ({ color }) => <MaterialIcons size={28} name="question-answer" color={color} />,
+          tabBarIcon: ({ color }) => <MaterialIcons size={28} name="question-answer" color="pink" />,
           headerShown: false,
         }}/>
         
@@ -56,7 +56,7 @@ export default function TabLayout() {
         name="aboutme"
         options={{
           title: 'Sobre',
-          tabBarIcon: ({ color }) => <Ionicons name="people" size={24} color="black" />,
+          tabBarIcon: ({ color }) => <Ionicons name="people" size={24} color="pink" />,
            headerShown: false,
         }}/>
         

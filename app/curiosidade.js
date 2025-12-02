@@ -4,83 +4,121 @@ import fotom from "../assets/mulhertorre.jpg";
 
 export default function Page() {
   return (
-    
-    <View style={styles.container}>
-    <ScrollView style={{ flex: 1 }}>
-      <StatusBar style="auto" />
+    <ScrollView style={styles.scrollContainer}>
 
-      <View style={styles.card}>
-        <Text style={styles.title}>Curiosidades</Text>
+      {/* topo decorativo */}
+      <View style={styles.headerWave} />
 
-  <View style={styles.divisor}></View>
+      <View style={styles.container}>
+        <StatusBar style="auto" />
 
-       <Image source={fotom} style={styles.fotom} />
+        {/* CARD GLASSMORPHISM */}
+        <View style={styles.card}>
+          <Text style={styles.title}>Curiosidades</Text>
 
-        <Text style={styles.subtitle}>
-          A construção foi demorada: A construção levou cerca de 177 anos para ser concluída, pois foi realizada em três fases e interrompida por guerras. 
-           {"\n\n"}
-A inclinação começou cedo: A torre começou a se inclinar após a construção do terceiro andar, em 1178. 
-Não é a mais inclinada: Apesar de sua fama, a Torre de Pisa não é a mais inclinada do mundo; a Torre de Suurhusen, na Alemanha, possui uma inclinação maior. 
- {"\n\n"}
-Experimentos de Galileu: O cientista Galileu Galilei usou a torre para realizar experimentos sobre a queda de corpos, demonstrando que a velocidade de queda é independente da massa dos objetos, lançando duas bolas de canhão de pesos diferentes do topo. .
-        </Text>
+          <View style={styles.divisor}></View>
+
+          <Image source={fotom} style={styles.foto} />
+
+          <Text style={styles.subtitle}>
+            A construção levou cerca de 177 anos para ser concluída, pois foi
+            realizada em três fases e interrompida por guerras.
+            {"\n\n"}
+            A torre começou a se inclinar após a construção do terceiro andar,
+            em 1178.
+            {"\n\n"}
+            Apesar da fama, a Torre de Pisa não é a mais inclinada do mundo;
+            a Torre de Suurhusen, na Alemanha, possui inclinação maior.
+            {"\n\n"}
+            O cientista Galileu Galilei usou a torre para realizar experimentos
+            sobre queda de corpos, demonstrando que a velocidade da queda não
+            depende da massa dos objetos.
+          </Text>
+        </View>
       </View>
-      </ScrollView>
-    </View>
-    
+    </ScrollView>
   );
 }
 
 const styles = StyleSheet.create({
+  scrollContainer: {
+    backgroundColor: "rgb(244, 136, 136)",
+  },
+
   container: {
     flex: 1,
     alignItems: "center",
-    backgroundColor: "rgb(238, 219, 218)",
-    justifyContent: "center",
-    padding: 20,
+    paddingBottom: 40,
   },
 
-  card: {
-    backgroundColor: "white",
-    padding: 20,
-    borderRadius: 20,
+  // topo em onda
+  headerWave: {
     width: "100%",
+    height: 230,
+    backgroundColor: "rgb(243, 216, 216)",
+    borderBottomLeftRadius: 120,
+    borderBottomRightRadius: 120,
+    opacity: 0.55,
+    transform: [{ scaleX: 1.4 }],
+  },
+
+  // card glass premium
+  card: {
+    marginTop: -80,
+    backgroundColor: "rgba(255, 255, 255, 0.25)",
+    padding: 28,
+    width: "90%",
     maxWidth: 380,
+    borderRadius: 28,
+
+    borderWidth: 1,
+    borderColor: "rgba(255, 255, 255, 0.4)",
+
+    elevation: 18,
+    shadowColor: "#000",
+    shadowOpacity: 0.18,
+    shadowOffset: { width: 0, height: 6 },
+    shadowRadius: 10,
+
     alignItems: "center",
-    elevation: 4, // sombra para Android
-    shadowColor: "#000", // sombra para iOS
-    shadowOpacity: 0.2,
-    shadowOffset: { width: 0, height: 2 },
-    shadowRadius: 6,
   },
 
   title: {
-    fontSize: 40,
-    fontWeight: "bold",
+    fontSize: 32,
+    fontWeight: "700",
     textAlign: "center",
-    marginBottom: 20,
-     fontFamily: "serif",
+    color: "#2f2f2f",
+    marginBottom: 5,
   },
 
- fotom: {
-    width: "100%",
-    height: 240,
-    borderRadius: 15,
-    marginBottom: 20,
- },
- divisor: {
-    width: 60,
+  divisor: {
+    width: 65,
     height: 4,
     backgroundColor: "#d6b28a",
     borderRadius: 10,
-    marginTop: 8,
     marginBottom: 20,
   },
 
+  foto: {
+    width: "100%",
+    height: 260,
+    borderRadius: 20,
+    marginBottom: 20,
+
+    borderWidth: 4,
+    borderColor: "rgba(255,255,255,0.7)",
+
+    elevation: 12,
+    shadowColor: "#000",
+    shadowOpacity: 0.25,
+    shadowOffset: { width: 0, height: 4 },
+    shadowRadius: 10,
+  },
+
   subtitle: {
-    fontSize: 14,
-    lineHeight: 20,
+    fontSize: 15,
+    lineHeight: 22,
     color: "#333",
-    textAlign: "center",
+    textAlign: "left",
   },
 });

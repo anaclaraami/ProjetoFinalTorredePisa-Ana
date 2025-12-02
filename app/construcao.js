@@ -4,99 +4,117 @@ import fotoconstrucao from "../assets/fotoconstrucao.jpg";
 
 export default function Page() {
   return (
-      <View style={styles.container}> 
-        <ScrollView style={{ flex: 1 }}>
-          <StatusBar style="auto" />
+    <ScrollView style={styles.scrollContainer}>
+      {/* Topo decorativo em onda */}
+      <View style={styles.headerWave} />
 
-          <View style={styles.card}>
-            <Text style={styles.title}>Construção da Torre</Text>
+      <View style={styles.container}>
+        <StatusBar style="auto" />
 
-            <View style={styles.divisor}></View>
+        {/* Card glassmorphism */}
+        <View style={styles.card}>
+          <Text style={styles.title}>Construção da Torre</Text>
 
-            <Image source={fotoconstrucao} style={styles.foto1} />
+          <View style={styles.divisor}></View>
 
-            <Text style={styles.text}>
-              A Torre de Pisa foi projetada como parte do complexo da Catedral de Pisa,
-              que inclui o Batistério e o Camposanto Monumentale. Sua construção
-              começou em 1173, durante o auge da riqueza da cidade, uma potência
-              marítima importante ao lado de Gênova e Veneza.
-              {"\n\n"}
-              Projetada pelo arquiteto Bonanno Pisano, a torre teve suas obras
-              interrompidas diversas vezes devido a guerras e problemas econômicos.
-              Essas pausas contribuíram para sua inclinação característica, que
-              começou ainda nas primeiras fases da construção.
-            </Text>
-          </View> 
-        </ScrollView>
+          <Image source={fotoconstrucao} style={styles.foto1} />
+
+          <Text style={styles.text}>
+            A Torre de Pisa foi projetada como parte do complexo da Catedral de Pisa,
+            que inclui o Batistério e o Camposanto Monumentale. Sua construção
+            começou em 1173, durante o auge da riqueza da cidade, uma potência
+            marítima importante ao lado de Gênova e Veneza.
+            {"\n\n"}
+            Projetada pelo arquiteto Bonanno Pisano, a torre teve suas obras
+            interrompidas diversas vezes devido a guerras e problemas econômicos.
+            Essas pausas contribuíram para sua inclinação característica, que
+            começou ainda nas primeiras fases da construção.
+          </Text>
+        </View>
       </View>
+    </ScrollView>
   );
 }
 
 const styles = StyleSheet.create({
+  scrollContainer: {
+    backgroundColor: "rgb(244, 136, 136)",
+  },
+
   container: {
     flex: 1,
     alignItems: "center",
-    padding: 20,
-
-    // gradiente fake com duas cores
-    backgroundColor: "rgb(243, 216, 216)",
+    paddingBottom: 40,
   },
 
-  card: {
-    backgroundColor: "#fff",
+  // topo decorativo em onda
+  headerWave: {
     width: "100%",
-    maxWidth: 400,
-    borderRadius: 25,
-    padding: 25,
-    alignItems: "center",
+    height: 230,
+    backgroundColor: "rgb(243, 216, 216)",
+    borderBottomLeftRadius: 120,
+    borderBottomRightRadius: 120,
+    opacity: 0.55,
+    transform: [{ scaleX: 1.4 }],
+  },
 
-    // sombra
-    elevation: 5,
-    shadowColor: "#000",
-    shadowOpacity: 0.25,
-    shadowOffset: { width: 0, height: 4 },
-    shadowRadius: 6,
+  // Card glassmorphism
+  card: {
+    marginTop: -90,
+    backgroundColor: "rgba(255, 255, 255, 0.25)",
+    padding: 26,
+    width: "90%",
+    maxWidth: 380,
+    borderRadius: 28,
 
-    // borda suave decorativa
     borderWidth: 1,
-    borderColor: "rgba(0,0,0,0.06)",
+    borderColor: "rgba(255, 255, 255, 0.4)",
+
+    elevation: 20,
+    shadowColor: "#000",
+    shadowOpacity: 0.15,
+    shadowOffset: { width: 0, height: 6 },
+    shadowRadius: 12,
+
+    alignItems: "center",
   },
 
   title: {
-    fontSize: 34,
-    fontWeight: "bold",
+    fontSize: 32,
+    fontWeight: "700",
     textAlign: "center",
-    fontFamily: "serif",
+    color: "#2f2f2f",
   },
 
   divisor: {
-    width: 60,
+    width: 65,
     height: 4,
     backgroundColor: "#d6b28a",
-    borderRadius: 10,
-    marginTop: 8,
-    marginBottom: 20,
+    borderRadius: 8,
+    marginTop: 10,
+    marginBottom: 18,
   },
 
   foto1: {
     width: "100%",
     height: 240,
-    borderRadius: 15,
-    marginBottom: 20,
+    borderRadius: 20,
+    marginBottom: 22,
+    borderWidth: 4,
+    borderColor: "rgba(255,255,255,0.7)",
 
-    // leve sombra
-    elevation: 3,
+    elevation: 10,
     shadowColor: "#000",
-    shadowOpacity: 0.2,
-    shadowOffset: { width: 0, height: 3 },
-    shadowRadius: 5,
+    shadowOpacity: 0.25,
+    shadowOffset: { width: 0, height: 4 },
+    shadowRadius: 12,
   },
 
   text: {
-    fontSize: 16,
+    fontSize: 15,
+    lineHeight: 22,
+    color: "#333",
     textAlign: "justify",
-    lineHeight: 24,
-    color: "#444",
-    marginTop: 5,
   },
 });
+

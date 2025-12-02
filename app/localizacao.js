@@ -4,78 +4,116 @@ import mapa from "../assets/mapatorre.jpg";
 
 export default function Page() {
   return (
-    
-    <View style={styles.container}>
-    <ScrollView style={{ flex: 1 }}>
-      <StatusBar style="auto" />
+    <ScrollView style={styles.scrollContainer}>
 
-      <View style={styles.card}>
-        <Text style={styles.title}>Localização</Text>
+      {/* Topo em onda */}
+      <View style={styles.headerWave} />
 
-  <View style={styles.divisor}></View>
+      <View style={styles.container}>
+        <StatusBar style="auto" />
 
-       <Image source={mapa} style={styles.fotom} />
+        {/* Card estilizado glass */}
+        <View style={styles.card}>
+          <Text style={styles.title}>Localização</Text>
 
-        <Text style={styles.subtitle}>
-          A Torre de Pisa fica na cidade de Pisa, na região da Toscana, na Itália. Ela está situada na Piazza dei Miracoli, um grande espaço aberto considerado um dos centros históricos mais importantes do país. Nesse local, além da torre, também estão a Catedral de Pisa e o Batistério, formando um conjunto arquitetônico muito visitado por turistas do mundo todo.
-        </Text>
+          <View style={styles.divisor}></View>
+
+          <Image source={mapa} style={styles.fotom} />
+
+          <Text style={styles.subtitle}>
+            A Torre de Pisa fica na cidade de Pisa, na região da Toscana, na Itália.
+            Ela está situada na Piazza dei Miracoli, um grande espaço aberto
+            considerado um dos centros históricos mais importantes do país.
+            {"\n\n"}
+            Nesse local, além da torre, também estão a Catedral de Pisa e o
+            Batistério, formando um conjunto arquitetônico muito visitado por
+            turistas do mundo todo.
+          </Text>
+        </View>
       </View>
-      </ScrollView>
-    </View>
-    
+    </ScrollView>
   );
 }
 
 const styles = StyleSheet.create({
+  scrollContainer: {
+    backgroundColor: "rgb(244, 136, 136)",
+  },
+
   container: {
     flex: 1,
     alignItems: "center",
-    backgroundColor: "rgb(238, 219, 218)",
-    justifyContent: "center",
-    padding: 20,
+    paddingBottom: 40,
   },
 
-  card: {
-    backgroundColor: "white",
-    padding: 20,
-    borderRadius: 20,
+  // topo decorativo em onda
+  headerWave: {
     width: "100%",
+    height: 230,
+    backgroundColor: "rgb(243, 216, 216)",
+    borderBottomLeftRadius: 120,
+    borderBottomRightRadius: 120,
+    opacity: 0.55,
+    transform: [{ scaleX: 1.4 }],
+  },
+
+  // Card glassmorphism
+  card: {
+    marginTop: -90,
+    backgroundColor: "rgba(255, 255, 255, 0.25)",
+    padding: 26,
+    width: "90%",
     maxWidth: 380,
+    borderRadius: 28,
+
+    borderWidth: 1,
+    borderColor: "rgba(255, 255, 255, 0.4)",
+
+    elevation: 20,
+    shadowColor: "#000",
+    shadowOpacity: 0.15,
+    shadowOffset: { width: 0, height: 6 },
+    shadowRadius: 12,
+
     alignItems: "center",
-    elevation: 4, // sombra para Android
-    shadowColor: "#000", // sombra para iOS
-    shadowOpacity: 0.2,
-    shadowOffset: { width: 0, height: 2 },
-    shadowRadius: 6,
   },
 
   title: {
-    fontSize: 40,
-    fontWeight: "bold",
+    fontSize: 32,
+    fontWeight: "700",
     textAlign: "center",
-    marginBottom: 20,
-     fontFamily: "serif",
+    color: "#2f2f2f",
   },
 
- fotom: {
-    width: "100%",
-    height: 240,
-    borderRadius: 15,
-    marginBottom: 20,
- },
- divisor: {
-    width: 60,
+  divisor: {
+    width: 65,
     height: 4,
     backgroundColor: "#d6b28a",
-    borderRadius: 10,
-    marginTop: 8,
-    marginBottom: 20,
+    borderRadius: 8,
+    marginTop: 10,
+    marginBottom: 18,
+  },
+
+  // imagem estilizada com borda translúcida
+  fotom: {
+    width: "100%",
+    height: 240,
+    borderRadius: 20,
+    marginBottom: 22,
+    borderWidth: 4,
+    borderColor: "rgba(255,255,255,0.7)",
+
+    elevation: 10,
+    shadowColor: "#000",
+    shadowOpacity: 0.25,
+    shadowOffset: { width: 0, height: 4 },
+    shadowRadius: 12,
   },
 
   subtitle: {
-    fontSize: 14,
-    lineHeight: 20,
+    fontSize: 15,
+    lineHeight: 22,
     color: "#333",
-    textAlign: "center",
+    textAlign: "left",
   },
 });
