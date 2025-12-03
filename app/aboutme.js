@@ -5,7 +5,6 @@ import { SafeAreaView } from "react-native-safe-area-context";
 
 export default function Page() {
   return (
-    <SafeAreaView style={{ flex: 1 }}>
       <View style={styles.container}>
         <Text style={styles.title}>SOBRE MIM</Text>
         <View style={styles.divisor}></View>
@@ -28,10 +27,7 @@ export default function Page() {
             </Text>
           </View>
         </View>
-
-        <StatusBar style="auto" />
       </View>
-    </SafeAreaView>
   );
 }
 
